@@ -1,1 +1,22 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  visibility: inherit;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  max-width: 100%;
+}
+
+*:hover.custom-shadow {
+  box-shadow: 8px 8px 0 oklch(0.257 0.09 281.288);
+}
+
+.custom-shadow-2 {
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.05);
+}
