@@ -16,7 +16,23 @@ createRoot(document.getElementById('root')!).render(
  ---- Navigation Bar (Routing Links)
  |
  ---- Home page
- |
+ | | 
+ | ---- Hero
+ | | | 
+ | | ---- ShopNowButton
+ | |  
+ | ---- Featured Products   
+ | | |
+ | | ---- Carousel
+ | | | |
+ | | | ---- Card
+ | | | |
+ | | | ---- CarouselSwitchButton
+ | | | 
+ | | ---- ShopNowButton  
+ | |
+ | ---- Newsletter
+ | 
  ---- Shop page 
  | | 
  | ---- Card (types: shop-page || cart-page)
@@ -34,6 +50,9 @@ createRoot(document.getElementById('root')!).render(
  |   |   ---- Save Quantity Button 
  |
  ---- 404 Error Page
+ |
+ ---- Footer 
+
 
 
 

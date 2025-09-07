@@ -4,6 +4,8 @@ import FeaturedProducts from './FeaturedProducts';
 import Newsletter from './Newsletter';
 import Footer from './Footer';
 
+import ShopPage from './ShopPage';
+
 const App = () => {
   return (
     <div>
@@ -12,6 +14,9 @@ const App = () => {
       <FeaturedProducts />
       <Newsletter />
       <Footer />
+      {
+        //<ShopPage />
+      }
     </div>
   );
 };

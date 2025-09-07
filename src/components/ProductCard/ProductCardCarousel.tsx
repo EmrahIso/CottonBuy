@@ -1,4 +1,4 @@
-const Card = () => {
+const ProductCardCarousel = () => {
   return (
     <article className='flex flex-col items-center gap-10'>
       <img src='./man.jpg' alt='img' className='h-[320px]' />
@@ -12,4 +12,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default ProductCardCarousel;
