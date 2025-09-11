@@ -1,11 +1,19 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+
+import { createBrowserRouter, RouterProvider } from 'react-router';
+import routesArray from './app/routes';
+
+import { ProductsContextProvider } from './features/products/context/ProductsContext';
 import './main.css';
-import App from './components/App';
+
+const router = createBrowserRouter(routesArray);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <ProductsContextProvider>
+      <RouterProvider router={router} />
+    </ProductsContextProvider>
   </StrictMode>
 );
 
