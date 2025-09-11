@@ -1,0 +1,33 @@
+import Logo from '../ui/Logo';
+import CartLink from '../ui/CartLink';
+
+import { Link } from 'react-router';
+
+const Navigation = () => {
+  return (
+    <header className='h-[80px] flex items-center'>
+      <div className='container xl:max-w-[1280px] mx-auto px-4 py-10 flex items-center justify-between'>
+        <Logo />
+        <nav className='flex gap-6 p-2 rounded-4xl'>
+          <Link
+            to='/'
+            className='text-neutral-600 hover:bg-gray-200 active:bg-neutral-200 active:text-neutral-900 transition-colors font-medium text-base rounded-full flex items-center px-5 py-2 '
+          >
+            Home
+          </Link>
+          <Link
+            to='shop'
+            className='text-neutral-600 hover:bg-gray-200 active:bg-neutral-200 active:text-neutral-900 transition-colors font-medium text-base rounded-full flex items-center px-5 py-2 '
+          >
+            Shop
+          </Link>
+        </nav>
+        <aside>
+          <CartLink />
+        </aside>
+      </div>
+    </header>
+  );
+};
+
+export default Navigation;
