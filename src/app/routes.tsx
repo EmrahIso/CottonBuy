@@ -5,6 +5,7 @@ import App from './App';
 import HomePage from '../pages/HomePage';
 import ShopPage from '../pages/ShopPage';
 import CartPage from '../pages/CartPage';
+import NotFoundPage from '../pages/NotFoundPage';
 
 import {
   ProductCardShopGrid,
@@ -15,6 +16,7 @@ const routesArray: RouteObject[] = [
   {
     path: '/',
     element: <App />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
@@ -29,7 +31,7 @@ const routesArray: RouteObject[] = [
             element: <ProductCardShopGrid />,
           },
           {
-            path: 'card-details',
+            path: ':productId',
             element: <ProductCardDetail />,
           },
         ],
