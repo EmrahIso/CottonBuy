@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import type { Product } from '../../hooks/useProducts';
+import type { Product } from '../../../types/Product';
 
 type ProductCardShopProps = {
   productData: Product;
@@ -9,7 +9,7 @@ const ProductCardShop = ({ productData }: ProductCardShopProps) => {
   return (
     <article className='flex flex-col items-center gap-8'>
       <Link
-        to='card-details'
+        to={`/shop/${productData.id}`}
         className='bg-white  inline-block border-1 border-transparent rounded-2xl hover:border-fuchsia-600'
       >
         <img

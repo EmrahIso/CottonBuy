@@ -7,7 +7,10 @@ type ProductCardCarouselProps = {
 
 const ProductCardCarousel = ({ productData }: ProductCardCarouselProps) => {
   return (
-    <Link to='shop/card-details' className='flex flex-col items-center gap-10'>
+    <Link
+      to={`/shop/${productData.id}`}
+      className='flex flex-col items-center gap-10'
+    >
       <img
         src={productData.image}
         alt={productData.title + 'image'}
