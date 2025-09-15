@@ -1,14 +1,10 @@
-import { type sortType } from '../../pages/ShopPage';
+import { useOutletContext } from 'react-router';
+import { type ShopOutletContext } from '../../pages/ShopPage';
 
-type ShopSortSelectProps = {
-  selectSortValue: sortType;
-  selectSortChangeHandler: React.ChangeEventHandler<HTMLSelectElement>;
-};
+const ShopSortSelect = () => {
+  const { selectSortChangeHandler, selectSortValue } =
+    useOutletContext<ShopOutletContext>();
 
-const ShopSortSelect = ({
-  selectSortValue,
-  selectSortChangeHandler,
-}: ShopSortSelectProps) => {
   return (
     <div className='px-24 flex gap-8 mt-16 justify-between'>
       <label

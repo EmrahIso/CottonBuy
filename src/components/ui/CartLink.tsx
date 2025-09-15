@@ -2,7 +2,11 @@ import { Link } from 'react-router';
 
 import { ShoppingCart } from 'lucide-react';
 
-const CartLink = () => {
+type CartLinkProps = {
+  cartProductsCount: number;
+};
+
+const CartLink = ({ cartProductsCount }: CartLinkProps) => {
   return (
     <Link
       to='cart'
@@ -13,7 +17,7 @@ const CartLink = () => {
         <ShoppingCart size={20} strokeWidth={2.5} />
       </div>
       <span className='bg-gradient-to-b px-1.25 rounded-full from-fuchsia-500 to-purple-500 absolute text-neutral-100 text-sm font-bold bottom-0 right-0 translate-x-0.5 translate-y-0.5'>
-        0
+        {cartProductsCount}
       </span>
     </Link>
   );

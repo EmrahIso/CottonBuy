@@ -20,14 +20,12 @@ const Carousel = () => {
     if (startIndex > 0) {
       setStartIndex((prevState) => prevState - 1);
     }
-    console.log(visibleProducts);
   };
 
   const slideCarouselRight = () => {
     if (startIndex < products.length - 3) {
       setStartIndex((prevState) => prevState + 1);
     }
-    console.log(visibleProducts);
   };
 
   return (
