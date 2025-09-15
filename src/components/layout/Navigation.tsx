@@ -1,9 +1,13 @@
+import { Link } from 'react-router';
+
+import { useCartContext } from '../../features/cart/hooks/useCartContext';
+
 import Logo from '../ui/Logo';
 import CartLink from '../ui/CartLink';
 
-import { Link } from 'react-router';
-
 const Navigation = () => {
+  const { cartProducts } = useCartContext();
+
   return (
     <header className='h-[80px] flex items-center'>
       <div className='container xl:max-w-[1280px] mx-auto px-4 py-10 flex items-center justify-between'>
@@ -23,7 +27,7 @@ const Navigation = () => {
           </Link>
         </nav>
         <aside>
-          <CartLink />
+          <CartLink cartProductsCount={cartProducts.length} />
         </aside>
       </div>
     </header>

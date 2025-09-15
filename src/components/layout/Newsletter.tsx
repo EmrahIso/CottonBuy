@@ -22,7 +22,8 @@ const Newsletter = () => {
               name='email'
               id='email'
               placeholder='Your email here'
-              className='p-4 text-lg h-full'
+              autoComplete='true'
+              className='p-4 text-lg h-full rounded-l-3xl'
             />
             <button
               type='submit'
