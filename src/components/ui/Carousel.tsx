@@ -29,7 +29,7 @@ const Carousel = () => {
   };
 
   return (
-    <article className='grid px-24 grid-cols-3 gap-32 relative'>
+    <article className='grid px-24 grid-cols-3 gap-32 relative h-[468px]'>
       {visibleProducts.map((product: Product) => (
         <ProductCardCarousel key={product.id} productData={product} />
       ))}

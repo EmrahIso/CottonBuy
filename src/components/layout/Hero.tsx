@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
       <div className='mt-[150px] relative'>
         <img
-          src='./woman.png'
+          src='./woman.webp'
           alt='A Image of our best seller product'
           className='h-[420px] ml-[75px]'
         />

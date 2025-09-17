@@ -5,12 +5,17 @@
 html {
   visibility: inherit;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 html,
 body {
   max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
 }
 
 *:hover.custom-shadow {

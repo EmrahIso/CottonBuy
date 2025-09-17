@@ -25,12 +25,24 @@ const CartPage = () => {
     0
   );
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) {
+    return (
+      <section className='min-h-[656px] container xl:max-w-[1280px] mx-auto'>
+        <p>Loading...</p>
+      </section>
+    );
+  }
+
+  if (error)
+    return (
+      <section className='min-h-[656px] container xl:max-w-[1280px] mx-auto'>
+        <p>Error: {error}</p>
+      </section>
+    );
 
   if (cartProducts.length === 0) {
     return (
-      <section className='container xl:max-w-[1280px] mx-auto py-60 flex flex-col items-center'>
+      <section className='container xl:max-w-[1280px] min-h-[656px] mx-auto py-60 flex flex-col items-center'>
         <h3 className='text-center font-bold text-4xl'>
           {' '}
           No items in Cart yet :/
@@ -46,7 +58,7 @@ const CartPage = () => {
   }
 
   return (
-    <section className='container xl:max-w-[1280px] mx-auto py-20'>
+    <section className='container xl:max-w-[1280px] min-h-[656px] mx-auto py-20'>
       <div className='flex flex-col gap-8'>
         {cartProducts.map((cartProduct: CartProduct) => {
           const productData: Product | undefined = products.find(

@@ -26,8 +26,19 @@ const ShopPage = () => {
     setSortedProducts(products);
   }, [products]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading)
+    return (
+      <section className='container min-h-[2500px] xl:max-w-[1280px] mx-auto py-10'>
+        <p>Loading...</p>
+      </section>
+    );
+
+  if (error)
+    return (
+      <section className='container min-h-[2500px] xl:max-w-[1280px] mx-auto py-10'>
+        <p>Error: {error}</p>
+      </section>
+    );
 
   const selectSortChangeHandler: React.ChangeEventHandler = (
     e: React.ChangeEvent<HTMLSelectElement>
@@ -52,11 +63,11 @@ const ShopPage = () => {
   };
 
   return (
-    <div className='container xl:max-w-[1280px] mx-auto py-10'>
+    <section className='container xl:max-w-[1280px] mx-auto py-10'>
       <Outlet
         context={{ sortedProducts, selectSortChangeHandler, selectSortValue }}
       />
-    </div>
+    </section>
   );
 };
 

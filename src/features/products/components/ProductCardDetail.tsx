@@ -27,13 +27,23 @@ const ProductCardDetail = () => {
     ? 0
     : targetCartProduct.productQuantity;
 
-  if (loading) return <p>Loading...</p>;
+  if (loading)
+    return (
+      <section className='container xl:max-w-[1280px] h-[1014px] mx-auto py-32 px-4'>
+        <p>Loading...</p>
+      </section>
+    );
 
-  if (error) return <p>Error: {error}</p>;
+  if (error)
+    return (
+      <section className='container xl:max-w-[1280px] h-[1014px] mx-auto py-32 px-4'>
+        <p>Error: {error}</p>
+      </section>
+    );
 
   if (targetProduct === undefined) {
     return (
-      <section className='container xl:max-w-[1280px] mx-auto py-32 px-4 grid grid-cols-2 gap-32'>
+      <section className='container xl:max-w-[1280px] h-[1014px] mx-auto py-32 px-4 grid grid-cols-2 gap-32'>
         <h2>The product you are looking for was not found!</h2>
       </section>
     );
@@ -48,7 +58,7 @@ const ProductCardDetail = () => {
         Go to Shop Page!
       </Link>
       <div className='grid grid-cols-2 gap-32 pt-16'>
-        <div className='p-16 bg-white rounded-4xl shadow-sm'>
+        <div className='p-16 bg-white rounded-4xl shadow-sm h-[730px]'>
           <img
             src={targetProduct.image}
             alt={targetProduct.title + 'image'}

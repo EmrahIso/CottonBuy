@@ -40,6 +40,7 @@ const QuantityPicker = ({
         <button
           type='button'
           className='cursor-pointer text-fuchsia-600'
+          aria-label='Decrease Quantity'
           onClick={() => decrementProductQuantity()}
         >
           <Minus size={20} strokeWidth={3} />
@@ -50,6 +51,7 @@ const QuantityPicker = ({
         <button
           type='button'
           className='cursor-pointer text-fuchsia-600'
+          aria-label='Increase Quantity'
           onClick={() => incrementProductQuantity()}
         >
           <Plus size={20} strokeWidth={3} />
