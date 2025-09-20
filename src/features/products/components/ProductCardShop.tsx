@@ -7,7 +7,7 @@ type ProductCardShopProps = {
 
 const ProductCardShop = ({ productData }: ProductCardShopProps) => {
   return (
-    <article className='flex flex-col items-center gap-8'>
+    <div className='flex flex-col items-center gap-8'>
       <Link
         to={`/shop/${productData.id}`}
         className='bg-white  inline-block border-1 border-transparent rounded-2xl hover:border-fuchsia-600'
@@ -16,6 +16,8 @@ const ProductCardShop = ({ productData }: ProductCardShopProps) => {
           src={productData.image}
           alt={productData.title + 'image'}
           className='h-[320px] rounded-2xl p-8'
+          height='320px'
+          width='100%'
         />
       </Link>
       <h3 className='text-neutral-600 tracking-wider font-medium text-center'>
@@ -24,7 +26,7 @@ const ProductCardShop = ({ productData }: ProductCardShopProps) => {
       <span className='inline-block text-indigo-950 font-black text-xl -mt-4'>
         {'$' + productData.price.toFixed(2)}
       </span>
-    </article>
+    </div>
   );
 };
 

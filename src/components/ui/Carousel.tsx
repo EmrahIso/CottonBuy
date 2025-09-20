@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useProductsContext } from '../../features/products/hooks/useProductsContext';
 
 import ProductCardCarousel from '../../features/products/components/ProductCardCarousel';
@@ -10,11 +10,38 @@ const Carousel = () => {
   const { products, loading, error } = useProductsContext();
   const [startIndex, setStartIndex] = useState<number>(0);
 
+  const setShownItemsQuantityCallback = (): 1 | 2 | 3 => {
+    if (window.innerWidth >= 1024) {
+      return 3;
+    } else if (window.innerWidth >= 768) {
+      return 2;
+    } else {
+      return 1;
+    }
+  };
+
+  const [shownItemsQuantity, setShownItemsQuantity] = useState<1 | 2 | 3>(
+    setShownItemsQuantityCallback
+  );
+  // Number of items shown depends on the browser window width (responsive layout).
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShownItemsQuantity(setShownItemsQuantityCallback);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  const visibleCount: number = 3;
-  const visibleProducts = products.slice(startIndex, startIndex + visibleCount);
+  const visibleProducts = products.slice(
+    startIndex,
+    startIndex + shownItemsQuantity
+  );
 
   const slideCarouselLeft = () => {
     if (startIndex > 0) {
@@ -29,7 +56,7 @@ const Carousel = () => {
   };
 
   return (
-    <article className='grid px-24 grid-cols-3 gap-32 relative h-[468px]'>
+    <article className='grid sm:px-24 px-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-32 relative h-[468px]'>
       {visibleProducts.map((product: Product) => (
         <ProductCardCarousel key={product.id} productData={product} />
       ))}

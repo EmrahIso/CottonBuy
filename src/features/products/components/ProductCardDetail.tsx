@@ -29,36 +29,36 @@ const ProductCardDetail = () => {
 
   if (loading)
     return (
-      <section className='container xl:max-w-[1280px] h-[1014px] mx-auto py-32 px-4'>
+      <section className='container xl:max-w-[1280px] xl:h-[1014px] lg:h-[920px] sm:h-[1750px] h-[1675px] mx-auto py-32 px-4'>
         <p>Loading...</p>
       </section>
     );
 
   if (error)
     return (
-      <section className='container xl:max-w-[1280px] h-[1014px] mx-auto py-32 px-4'>
+      <section className='container xl:max-w-[1280px] xl:h-[1014px] lg:h-[920px] sm:h-[1750px] h-[1675px] mx-auto py-32 px-4'>
         <p>Error: {error}</p>
       </section>
     );
 
   if (targetProduct === undefined) {
     return (
-      <section className='container xl:max-w-[1280px] h-[1014px] mx-auto py-32 px-4 grid grid-cols-2 gap-32'>
+      <section className='container xl:max-w-[1280px] xl:h-[1014px] lg:h-[920px] sm:h-[1750px] h-[1675px] mx-auto py-32 px-4 grid grid-cols-2 gap-32'>
         <h2>The product you are looking for was not found!</h2>
       </section>
     );
   }
 
   return (
-    <section className='container xl:max-w-[1280px] mx-auto pt-16 pb-32 px-4'>
+    <section className='container xl:max-w-[1280px] xl:h-[1014px] lg:h-[920px] sm:h-[1580px] h-[1300px] mx-auto pt-16 pb-32 px-4'>
       <Link
         to={'/shop'}
-        className='text-neutral-100 relative text-xl cursor-pointer font-medium rounded-full bg-gradient-to-bl from-fuchsia-500 to-purple-500 px-7 py-3.5 shadow-sm hover:from-neutral-100  hover:to-neutral-100 hover:text-indigo-950 transition-colors mt-20'
+        className='text-neutral-100 relative sm:text-xl text-base cursor-pointer font-medium rounded-full bg-gradient-to-bl from-fuchsia-500 to-purple-500 px-7 py-3.5 shadow-sm hover:from-neutral-100  hover:to-neutral-100 hover:text-indigo-950 transition-colors mt-20'
       >
         Go to Shop Page!
       </Link>
-      <div className='grid grid-cols-2 gap-32 pt-16'>
-        <div className='p-16 bg-white rounded-4xl shadow-sm h-[730px]'>
+      <div className='grid lg:grid-cols-2 grid-cols-1 lg:gap-32 gap-24 pt-16'>
+        <div className='sm:p-16 p-5 bg-white rounded-4xl shadow-sm xl:h-[730px] lg:h-[600px] md:h-[760px] sm:h-[740px] h-[400px]  lg:block flex justify-center'>
           <img
             src={targetProduct.image}
             alt={targetProduct.title + 'image'}

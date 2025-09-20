@@ -16,8 +16,8 @@ const CarouselSwitchButton = ({
       className={
         'cursor-pointer bg-white shadow-md text-fuchsia-600 absolute rounded-full flex items-center justify-center p-3 pr-3.5 -translate-y-1/2 top-1/2 hover:shadow-lg ' +
         (orientation === 'left'
-          ? 'left-0 -translate-x-1/2'
-          : 'right-0 translate-x-1/2')
+          ? 'left-[20px] -translate-x-1/2'
+          : 'right-[20px] translate-x-1/2')
       }
       onClick={clickHandler}
     >

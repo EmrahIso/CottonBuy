@@ -12,7 +12,7 @@ const ProductCardShopGrid = () => {
   return (
     <div>
       <ShopSortSelect />
-      <div className='grid grid-cols-3 mt-16 mb-32 px-16 gap-y-32 gap-x-32'>
+      <div className='grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-16 mb-32 sm:px-16 px-4 gap-y-32 gap-x-32 xl:min-h-[2500px] md:min-h-[3100px] min-h-[5700px]'>
         {sortedProducts.map((product: Product) => (
           <ProductCardShop key={product.id} productData={product} />
         ))}

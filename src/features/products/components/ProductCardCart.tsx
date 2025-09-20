@@ -15,20 +15,20 @@ const ProductCardCart = ({
   const { addProductToCart, removeProductFromCart } = useCartContext();
 
   return (
-    <article className='flex items-center gap-8 justify-between'>
+    <article className='lg:flex lg:items-center lg:gap-8 lg:justify-between grid sm:grid-cols-2 sm:gap-12 justify-items-center grid-cols-1 gap-12 border-b-1 pb-8 border-gray-100'>
       <div className='bg-white inline-block rounded-2xl'>
         <img
           src={productData.image}
           alt={productData.title + 'image'}
-          className='h-[160px] w-[160px] rounded-2xl p-8'
+          className='sm:h-[160px] h-[250px] sm:w-[160px]  rounded-2xl p-8'
         />
       </div>
-      <div className='flex flex-col gap-5'>
+      <div className='flex flex-col gap-5 sm:col-start-1 sm:row-start-2 sm:col-span-2 row-start-3'>
         <h3 className='text-neutral-600 tracking-wider font-medium text-center'>
           {productData.title}
         </h3>
-        <div className='flex gap-10 justify-center'>
-          <div className='flex gap-3 items-center'>
+        <div className='flex sm:gap-10 sm:flex-row flex-col gap-3 justify-center'>
+          <div className='flex gap-3 items-center sm:justify-start justify-center'>
             <span className='text-neutral-500 leading-7 text-sm'>
               Product Price:
             </span>
@@ -36,7 +36,7 @@ const ProductCardCart = ({
               {'$' + productData.price.toFixed(2)}
             </span>
           </div>
-          <div className='flex gap-3 items-center'>
+          <div className='flex gap-3 items-center sm:justify-start  justify-center'>
             <span className='text-neutral-500 leading-7 font-bold text-sm'>
               Total Price:
             </span>
@@ -46,7 +46,7 @@ const ProductCardCart = ({
           </div>
         </div>
       </div>
-      <div className='flex items-center'>
+      <div className='flex xl:flex-row lg:flex-col items-center'>
         <QuantityPicker
           buttonType={'cart'}
           addProductToCart={addProductToCart}

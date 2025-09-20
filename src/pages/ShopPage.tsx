@@ -28,14 +28,14 @@ const ShopPage = () => {
 
   if (loading)
     return (
-      <section className='container min-h-[2500px] xl:max-w-[1280px] mx-auto py-10'>
+      <section className='container xl:min-h-[2500px] md:min-h-[3100px] min-h-[5700px] xl:max-w-[1280px] mx-auto py-10'>
         <p>Loading...</p>
       </section>
     );
 
   if (error)
     return (
-      <section className='container min-h-[2500px] xl:max-w-[1280px] mx-auto py-10'>
+      <section className='container xl:min-h-[2500px] md:min-h-[3100px] min-h-[5700px] xl:max-w-[1280px] mx-auto py-10'>
         <p>Error: {error}</p>
       </section>
     );
@@ -63,7 +63,7 @@ const ShopPage = () => {
   };
 
   return (
-    <section className='container xl:max-w-[1280px] mx-auto py-10'>
+    <section className='container xl:max-w-[1280px] mx-auto py-10 '>
       <Outlet
         context={{ sortedProducts, selectSortChangeHandler, selectSortValue }}
       />

@@ -77,7 +77,7 @@ const SaveQuantityButton = ({
           className='px-9 py-3.5 rounded-xl shadow-xs hover:shadow-lg transition-shadow text-lg font-medium flex items-center justify-center gap-4 cursor-pointer text-neutral-100 bg-gradient-to-bl from-fuchsia-500 to-purple-500'
           onClick={saveQuantityButtonClickHandler}
         >
-          <span>Save</span>
+          <span>Save Item</span>
         </button>
       )}
       <QuantityCartUpdateNotification

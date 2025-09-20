@@ -76,14 +76,14 @@ const CartPage = () => {
       </div>
       <div className='mt-36'>
         <div className='flex items-center justify-center gap-12'>
-          <span className='text-2xl font-medium text-neutral-600 leading-7'>
+          <span className='sm:text-2xl text-xl font-medium text-neutral-600 leading-7'>
             Checkout Price:{' '}
           </span>
-          <span className='font-bold text-indigo-950 text-4xl'>
+          <span className='font-bold text-indigo-950 sm:text-4xl text-2xl'>
             {'$' + checkoutPrice.toFixed(2)}
           </span>
         </div>
-        <div className='flex justify-center mt-16'>
+        <div className='flex justify-center sm:mt-16 mt-8'>
           <CartCheckoutBtn checkoutPrice={checkoutPrice} />
         </div>
       </div>

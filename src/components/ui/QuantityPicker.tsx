@@ -35,8 +35,8 @@ const QuantityPicker = ({
   };
 
   return (
-    <div className='grid grid-cols-2 gap-16'>
-      <div className='bg-neutral-100 flex px-9 rounded-xl justify-between'>
+    <div className='grid xl:grid-cols-2 grid-cols-1 xl:gap-16 gap-6'>
+      <div className='bg-neutral-100 flex px-9 rounded-xl xl:justify-between h-[60px] justify-self-start'>
         <button
           type='button'
           className='cursor-pointer text-fuchsia-600'
