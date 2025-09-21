@@ -17,6 +17,9 @@ const Newsletter = () => {
             onSubmit={(e) => e.preventDefault()}
             className='border-1 flex items-center rounded-4xl border-fuchsia-600 h-[60px]'
           >
+            <label htmlFor='email' className='sr-only'>
+              Enter your email
+            </label>
             <input
               type='email'
               name='email'

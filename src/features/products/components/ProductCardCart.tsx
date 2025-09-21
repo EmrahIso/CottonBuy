@@ -19,14 +19,16 @@ const ProductCardCart = ({
       <div className='bg-white inline-block rounded-2xl'>
         <img
           src={productData.image}
-          alt={productData.title + 'image'}
-          className='sm:h-[160px] h-[250px] sm:w-[160px]  rounded-2xl p-8'
+          alt={`${productData.title}, ${productData.category}`}
+          height={160}
+          width={160}
+          className='sm:h-[160px] h-[240px] sm:w-[160px] w-[240px] object-cover rounded-2xl p-8'
         />
       </div>
       <div className='flex flex-col gap-5 sm:col-start-1 sm:row-start-2 sm:col-span-2 row-start-3'>
-        <h3 className='text-neutral-600 tracking-wider font-medium text-center'>
+        <h2 className='text-neutral-600 tracking-wider font-medium text-center line-clamp-2'>
           {productData.title}
-        </h3>
+        </h2>
         <div className='flex sm:gap-10 sm:flex-row flex-col gap-3 justify-center'>
           <div className='flex gap-3 items-center sm:justify-start justify-center'>
             <span className='text-neutral-500 leading-7 text-sm'>

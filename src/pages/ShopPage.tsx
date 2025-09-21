@@ -64,6 +64,7 @@ const ShopPage = () => {
 
   return (
     <section className='container xl:max-w-[1280px] mx-auto py-10 '>
+      <h1 className='sr-only'>CottonBuy Shop Page</h1>
       <Outlet
         context={{ sortedProducts, selectSortChangeHandler, selectSortValue }}
       />

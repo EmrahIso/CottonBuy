@@ -14,15 +14,15 @@ const ProductCardShop = ({ productData }: ProductCardShopProps) => {
       >
         <img
           src={productData.image}
-          alt={productData.title + 'image'}
+          alt={`${productData.title}, ${productData.category}`}
           className='h-[320px] rounded-2xl p-8'
           height='320px'
-          width='100%'
+          width='243px'
         />
       </Link>
-      <h3 className='text-neutral-600 tracking-wider font-medium text-center'>
+      <h2 className='text-neutral-600 tracking-wider font-medium text-center'>
         {productData.title}
-      </h3>
+      </h2>
       <span className='inline-block text-indigo-950 font-black text-xl -mt-4'>
         {'$' + productData.price.toFixed(2)}
       </span>

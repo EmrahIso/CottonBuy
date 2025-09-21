@@ -25,7 +25,9 @@ const Hero = () => {
         <img
           src='./woman.webp'
           alt='A Image of our best seller product'
-          className='sm:h-[420px] h-[320px] lg:ml-[75px]'
+          className='sm:h-[420px] sm:w-[370px] h-[320px] w-[280px] lg:ml-[75px]'
+          height='420px'
+          width='370px'
         />
         <div className='bg-white px-6 py-4 rounded-2xl custom-shadow-2 sm:-top-[30px] lg:left-0 lg:right-auto sm:right-[125px] sm:bottom-auto right-[50%] bottom-0 -translate-x-[-50%] -translate-y-[-55%]  absolute text-indigo-950 font-semibold sm:text-2xl text-xl flex flex-col gap-1'>
           <span className='text-xs text-neutral-500 font-semibold inline-block '>

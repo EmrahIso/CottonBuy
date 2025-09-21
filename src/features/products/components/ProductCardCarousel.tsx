@@ -13,8 +13,10 @@ const ProductCardCarousel = ({ productData }: ProductCardCarouselProps) => {
     >
       <img
         src={productData.image}
-        alt={productData.title + 'image'}
-        className='h-[320px]'
+        alt={`${productData.title}, ${productData.category}`}
+        className='h-[320px] w-[240px]'
+        height='320px'
+        width='240px'
       />
       <h3 className='text-neutral-600 tracking-wider font-medium text-center flex flex-col'>
         {productData.title}

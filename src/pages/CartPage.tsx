@@ -59,6 +59,7 @@ const CartPage = () => {
 
   return (
     <section className='container xl:max-w-[1280px] min-h-[656px] mx-auto py-20'>
+      <h1 className='sr-only'>CottonBuy Cart Page</h1>
       <div className='flex flex-col gap-8'>
         {cartProducts.map((cartProduct: CartProduct) => {
           const productData: Product | undefined = products.find(

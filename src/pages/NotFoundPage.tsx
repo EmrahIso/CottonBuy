@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 const NotFoundPage = () => {
   return (
     <section className='lg:pt-50 pt-6 flex gap-16 flex-col items-center'>
+      <h1 className='sr-only'>CottonBuy NotFound Page</h1>
       <div className='flex lg:flex-row flex-col items-center lg:gap-36 gap-18'>
         <div className=' lg:block flex flex-col items-center'>
           <h2 className='text-indigo-950 uppercase text-8xl flex flex-col gap-3'>

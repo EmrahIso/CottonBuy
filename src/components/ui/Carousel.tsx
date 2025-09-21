@@ -11,7 +11,7 @@ const Carousel = () => {
   const [startIndex, setStartIndex] = useState<number>(0);
 
   const setShownItemsQuantityCallback = (): 1 | 2 | 3 => {
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1280) {
       return 3;
     } else if (window.innerWidth >= 768) {
       return 2;
@@ -56,7 +56,7 @@ const Carousel = () => {
   };
 
   return (
-    <article className='grid sm:px-24 px-2 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-32 relative h-[468px]'>
+    <article className='grid sm:px-24 px-2 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-32 relative h-[468px]'>
       {visibleProducts.map((product: Product) => (
         <ProductCardCarousel key={product.id} productData={product} />
       ))}

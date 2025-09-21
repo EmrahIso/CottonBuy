@@ -50,19 +50,21 @@ const ProductCardDetail = () => {
   }
 
   return (
-    <section className='container xl:max-w-[1280px] xl:h-[1014px] lg:h-[920px] sm:h-[1580px] h-[1300px] mx-auto pt-16 pb-32 px-4'>
+    <section className='container xl:max-w-[1280px] mx-auto pt-16 pb-8 px-4'>
       <Link
         to={'/shop'}
-        className='text-neutral-100 relative sm:text-xl text-base cursor-pointer font-medium rounded-full bg-gradient-to-bl from-fuchsia-500 to-purple-500 px-7 py-3.5 shadow-sm hover:from-neutral-100  hover:to-neutral-100 hover:text-indigo-950 transition-colors mt-20'
+        className='text-neutral-100 relative sm:text-xl text-base cursor-pointer font-medium rounded-full bg-gradient-to-bl from-fuchsia-500 to-purple-500 px-7 py-3.5 shadow-sm hover:from-neutral-100  hover:to-neutral-100 hover:text-indigo-950 transition-colors mt-20 sm:h-[51px] h-[46px]'
       >
         Go to Shop Page!
       </Link>
       <div className='grid lg:grid-cols-2 grid-cols-1 lg:gap-32 gap-24 pt-16'>
-        <div className='sm:p-16 p-5 bg-white rounded-4xl shadow-sm xl:h-[730px] lg:h-[600px] md:h-[760px] sm:h-[740px] h-[400px]  lg:block flex justify-center'>
+        <div className='sm:p-16 p-5 bg-white rounded-4xl shadow-sm lg:block flex justify-center'>
           <img
             src={targetProduct.image}
-            alt={targetProduct.title + 'image'}
+            alt={`${targetProduct.title}, ${targetProduct.category}`}
             className='h-full rounded-2xl p-8'
+            height='600px'
+            width='400px'
           />
         </div>
         <div className='flex flex-col justify-center'>
@@ -70,14 +72,14 @@ const ProductCardDetail = () => {
             <p className='font-semibold tracking-wider text-sm uppercase text-neutral-500'>
               {targetProduct.category}
             </p>
-            <h3 className='text-indigo-950 text-4xl font-bold mt-4'>
+            <h2 className='text-indigo-950 text-4xl font-bold mt-4 sm:line-clamp-2 line-clamp-3'>
               {targetProduct.title}
-            </h3>
+            </h2>
           </div>
-          <p className='text-gray-500 font-regular text-sm mt-12 leading-5.75 tracking-wide'>
+          <p className='text-gray-500 font-regular text-sm mt-12 leading-5.75 tracking-wide line-clamp-4'>
             {targetProduct.description}
           </p>
-          <span className='inline-block text-indigo-950 font-black text-3xl mt-6 mb-16'>
+          <span className='inline-block text-indigo-950 font-black text-3xl mt-6 mb-16 line-clamp-1'>
             {'$' + targetProduct.price}
           </span>
           <QuantityPicker
