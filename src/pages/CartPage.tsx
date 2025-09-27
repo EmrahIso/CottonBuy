@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+
 import { useProductsContext } from '../features/products/hooks/useProductsContext';
 import { useCartContext } from '../features/cart/hooks/useCartContext';
 
@@ -27,7 +28,10 @@ const CartPage = () => {
 
   if (loading) {
     return (
-      <section className='min-h-[656px] container xl:max-w-[1280px] mx-auto'>
+      <section
+        className='min-h-[656px] container xl:max-w-[1280px] mx-auto'
+        data-testid='cart-page'
+      >
         <p>Loading...</p>
       </section>
     );
@@ -35,14 +39,20 @@ const CartPage = () => {
 
   if (error)
     return (
-      <section className='min-h-[656px] container xl:max-w-[1280px] mx-auto'>
+      <section
+        className='min-h-[656px] container xl:max-w-[1280px] mx-auto'
+        data-testid='cart-page'
+      >
         <p>Error: {error}</p>
       </section>
     );
 
   if (cartProducts.length === 0) {
     return (
-      <section className='container xl:max-w-[1280px] min-h-[656px] mx-auto py-60 flex flex-col items-center'>
+      <section
+        className='container xl:max-w-[1280px] min-h-[656px] mx-auto py-60 flex flex-col items-center'
+        data-testid='cart-page'
+      >
         <h3 className='text-center font-bold text-4xl'>
           {' '}
           No items in Cart yet :/

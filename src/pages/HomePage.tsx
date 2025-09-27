@@ -4,7 +4,7 @@ import FeaturedProducts from '../components/layout/FeaturedProducts';
 
 const HomePage = () => {
   return (
-    <main>
+    <main data-testid='homepage'>
       <Hero />
       <FeaturedProducts />
       <Newsletter />

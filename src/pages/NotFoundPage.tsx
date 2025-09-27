@@ -12,6 +12,7 @@ const NotFoundPage = () => {
           </h2>
           <Link
             to='/'
+            data-testid='not-found-page-link-to-homepage'
             className='text-neutral-100 relative text-xl inline-block cursor-pointer font-medium rounded-full bg-gradient-to-bl from-fuchsia-500 to-purple-500 px-7 py-3.5 shadow-lg mt-24 hover:-translate-1 custom-shadow transition-all'
           >
             Go to Home Page
