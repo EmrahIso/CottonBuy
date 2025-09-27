@@ -4,7 +4,7 @@ import ProductCardShop from './ProductCardShop';
 import ShopSortSelect from '../../../components/ui/ShopSortSelect';
 
 import { type ShopOutletContext } from '../../../pages/ShopPage';
-import type { Product } from '../../../types/Product';
+import { type Product } from '../../../types/Product';
 
 const ProductCardShopGrid = () => {
   const { sortedProducts } = useOutletContext<ShopOutletContext>();

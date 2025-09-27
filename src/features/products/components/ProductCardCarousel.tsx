@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+
 import { type Product } from '../../../types/Product';
 
 type ProductCardCarouselProps = {
@@ -15,6 +16,7 @@ const ProductCardCarousel = ({ productData }: ProductCardCarouselProps) => {
         src={productData.image}
         alt={`${productData.title}, ${productData.category}`}
         className='h-[320px] w-[240px]'
+        loading='lazy'
         height='320px'
         width='240px'
       />

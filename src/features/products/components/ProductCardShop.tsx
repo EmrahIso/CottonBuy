@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+
 import type { Product } from '../../../types/Product';
 
 type ProductCardShopProps = {
@@ -16,11 +17,15 @@ const ProductCardShop = ({ productData }: ProductCardShopProps) => {
           src={productData.image}
           alt={`${productData.title}, ${productData.category}`}
           className='h-[320px] rounded-2xl p-8'
+          loading='lazy'
           height='320px'
           width='243px'
         />
       </Link>
-      <h2 className='text-neutral-600 tracking-wider font-medium text-center'>
+      <h2
+        className='text-neutral-600 tracking-wider font-medium text-center'
+        data-testid={'product-card-shop-heading-' + productData.id}
+      >
         {productData.title}
       </h2>
       <span className='inline-block text-indigo-950 font-black text-xl -mt-4'>

@@ -1,7 +1,8 @@
-import type { Product } from '../../../types/Product';
+import { useCartContext } from '../../cart/hooks/useCartContext';
 
 import QuantityPicker from '../../../components/ui/QuantityPicker';
-import { useCartContext } from '../../cart/hooks/useCartContext';
+
+import type { Product } from '../../../types/Product';
 
 type ProductCardCartProps = {
   productData: Product;
@@ -23,10 +24,14 @@ const ProductCardCart = ({
           height={160}
           width={160}
           className='sm:h-[160px] h-[240px] sm:w-[160px] w-[240px] object-cover rounded-2xl p-8'
+          loading='lazy'
         />
       </div>
       <div className='flex flex-col gap-5 sm:col-start-1 sm:row-start-2 sm:col-span-2 row-start-3'>
-        <h2 className='text-neutral-600 tracking-wider font-medium text-center line-clamp-2'>
+        <h2
+          className='text-neutral-600 tracking-wider font-medium text-center line-clamp-2'
+          data-testid={'product-cart-shop-heading-' + productData.id}
+        >
           {productData.title}
         </h2>
         <div className='flex sm:gap-10 sm:flex-row flex-col gap-3 justify-center'>

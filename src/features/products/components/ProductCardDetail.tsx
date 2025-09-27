@@ -5,6 +5,7 @@ import { useProductsContext } from '../hooks/useProductsContext';
 import { useCartContext } from '../../cart/hooks/useCartContext';
 
 import QuantityPicker from '../../../components/ui/QuantityPicker';
+
 import type { Product } from '../../../types/Product';
 import type { CartProduct } from '../../../types/CartContextType';
 
@@ -23,7 +24,7 @@ const ProductCardDetail = () => {
       cartProduct.productId === Number(params.productId)
   );
 
-  const defaultProductQuantity = !targetCartProduct
+  const defaultProductQuantity: number = !targetCartProduct
     ? 0
     : targetCartProduct.productQuantity;
 
@@ -63,6 +64,7 @@ const ProductCardDetail = () => {
             src={targetProduct.image}
             alt={`${targetProduct.title}, ${targetProduct.category}`}
             className='h-full rounded-2xl p-8'
+            loading='lazy'
             height='600px'
             width='400px'
           />
