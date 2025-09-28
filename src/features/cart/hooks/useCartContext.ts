@@ -6,9 +6,7 @@ export const useCartContext = () => {
   const context = useContext(CartContext);
 
   if (!context) {
-    throw Error(
-      'useCartContextProvider must be used inside CartContextProvider'
-    );
+    throw Error('useCartContext must be used inside CartContextProvider');
   }
 
   return context;

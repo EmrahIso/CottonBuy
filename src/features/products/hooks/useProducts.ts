@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { type Product } from '../../../types/Product';
 
 const useProducts = () => {
@@ -6,8 +7,8 @@ const useProducts = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<null | string>(null);
 
-  const extractProductsForSell = (defaultProducts: Product[]) => {
-    // We sell only clothing.
+  const extractProductsForSell = (defaultProducts: Product[]): Product[] => {
+    // We 'sell' only clothing.
     const newProducts: Product[] = [];
 
     defaultProducts.forEach((product: Product) => {

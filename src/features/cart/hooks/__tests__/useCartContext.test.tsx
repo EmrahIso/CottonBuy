@@ -5,13 +5,8 @@ import { useCartContext } from '../useCartContext';
 
 describe('useCartContext', () => {
   it('throws error when hook is called outside of CartContextProvider', () => {
-    try {
-      renderHook(() => useCartContext());
-      throw new Error('Hook did not throw as expected');
-    } catch (error) {
-      expect(error).toEqual(
-        Error('useCartContextProvider must be used inside CartContextProvider')
-      );
-    }
+    expect(() => renderHook(() => useCartContext())).toThrowError(
+      'useCartContext must be used inside CartContextProvider'
+    );
   });
 });
