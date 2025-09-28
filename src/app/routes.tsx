@@ -1,5 +1,3 @@
-import { type RouteObject } from 'react-router';
-
 import App from './App';
 
 import HomePage from '../pages/HomePage';
@@ -11,6 +9,8 @@ import {
   ProductCardShopGrid,
   ProductCardDetail,
 } from '../features/products/components';
+
+import { type RouteObject } from 'react-router';
 
 const routesArray: RouteObject[] = [
   {
