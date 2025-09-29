@@ -3,7 +3,7 @@ import Carousel from '../ui/Carousel';
 
 const FeaturedProducts = () => {
   return (
-    <section className='bg-white'>
+    <section className='bg-white' data-testid='featured-products'>
       <div className='container xl:max-w-[1280px] mx-auto px-4 py-24'>
         <div className='text-center'>
           <h2 className='text-4xl font-black text-indigo-950'>

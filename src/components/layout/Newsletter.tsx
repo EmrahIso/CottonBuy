@@ -1,6 +1,6 @@
 const Newsletter = () => {
   return (
-    <section className='bg-white'>
+    <section className='bg-white' data-testid='newsletter'>
       <div className='container xl:max-w-[1280px] mx-auto px-4 py-16 flex items-center lg:flex-row flex-col justify-between lg:gap-5 gap-15 border-t-1 border-neutral-200'>
         <div>
           <h2 className='font-bold text-3xl leading-12  lg:text-left text-center text-indigo-950'>

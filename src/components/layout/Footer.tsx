@@ -1,6 +1,9 @@
 const Footer = () => {
   return (
-    <footer className='bg-indigo-950 sm:h-[325px] h-[460px]'>
+    <footer
+      className='bg-indigo-950 sm:h-[325px] h-[460px]'
+      data-testid='footer'
+    >
       <div className='container xl:max-w-[1280px] mx-auto flex sm:flex-row flex-col gap-12 px-8 sm:pt-16 pt-2 justify-between'>
         <h2 className='font-black text-gray-50 text-5xl mt-12'>CottonBuy</h2>
         <nav className='flex flex-col gap-2 pb-16 pr-4'>

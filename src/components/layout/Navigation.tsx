@@ -1,11 +1,13 @@
-import { Link } from 'react-router';
 import { useEffect, useState } from 'react';
+
+import { Link } from 'react-router';
 
 import { useCartContext } from '../../features/cart/hooks/useCartContext';
 
 import Logo from '../ui/Logo';
 import CartLink from '../ui/CartLink';
 import NavigationButton from '../ui/NavigationButton';
+
 import type { CartProduct } from '../../types/CartContextType';
 
 const Navigation = () => {
@@ -16,7 +18,7 @@ const Navigation = () => {
   );
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = (): void => {
       setNavigationMode(window.innerWidth >= 640 ? 'desktop' : 'mobile');
     };
 
@@ -26,7 +28,10 @@ const Navigation = () => {
   }, []);
 
   return (
-    <header className='sm:h-[80px] h-[60px] flex items-center pt-4'>
+    <header
+      className='sm:h-[80px] h-[60px] flex items-center pt-4'
+      data-testid='navigation'
+    >
       {navigationMode === 'desktop' ? (
         <DesktopNav cartProducts={cartProducts} />
       ) : (
@@ -42,7 +47,10 @@ type SubNavProps = {
 
 const DesktopNav = ({ cartProducts }: SubNavProps) => {
   return (
-    <div className='container xl:max-w-[1280px] mx-auto px-4 py-10 flex items-center justify-between'>
+    <div
+      className='container xl:max-w-[1280px] mx-auto px-4 py-10 flex items-center justify-between'
+      data-testid='navigation-desktop'
+    >
       <Logo />
       <nav className=' p-2 rounded-4xl'>
         <ul className='flex gap-6'>
@@ -92,7 +100,10 @@ const MobileNav = ({ cartProducts }: SubNavProps) => {
   };
 
   return (
-    <div className='container xl:max-w-[1280px] mx-auto px-4 py-10 '>
+    <div
+      className='container xl:max-w-[1280px] mx-auto px-4 py-10 '
+      data-testid='navigation-mobile'
+    >
       {isNavigationOpen ? (
         <nav>
           <div className='flex items-center justify-between'>
