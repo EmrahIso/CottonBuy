@@ -2,10 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { createBrowserRouter, RouterProvider } from 'react-router';
+
+import { CartContextProvider } from './features/cart/context/CartContext';
+import { ProductsContextProvider } from './features/products/context/ProductsContext';
 import routesArray from './app/routes';
 
-import { ProductsContextProvider } from './features/products/context/ProductsContext';
-import { CartContextProvider } from './features/cart/context/CartContext';
 import './main.css';
 
 const router = createBrowserRouter(routesArray);
