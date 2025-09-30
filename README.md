@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# 🛒 Fake Store Shopping Cart - CottonBuy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **CottonBuy** is a responsive shopping cart application for a Fake Store, built with **React** and **TypeScript**.  
+Fetches products dynamically using the **Fake Store API**, and features cart management and a simple checkout flow.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📑 Table of Contents
 
-## Expanding the ESLint configuration
+- [🌐 Demo](#demo)
+- [✨ Features](#features)
+- [🛠 Tech Stack](#tech-stack)
+- [⚡ Installation](#installation)
+- [🚀 Usage](#usage)
+- [🧪 Testing](#testing)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🌐 Demo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+CottonBuy  
+[Live Demo](https://cottonbuy.pages.dev/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ✨ Features
+
+- Dynamic product listing from **Fake Store API**  
+- Add to cart / remove from cart functionality  
+- Cart total calculation and checkout  
+- Responsive design for mobile and desktop  
+- Routing with **React Router**  
+- Icons using **Lucide React**  
+- State management using Context API  
+- Clean and type-safe TypeScript code  
+
+---
+
+## 🛠 Tech Stack
+
+### Main Stack
+
+- **JavaScript / TypeScript**  
+- **React**  
+- **React Router**  
+- **HTML5 & CSS3**  
+- **Tailwind CSS**  
+- **Vite**  
+
+### Additional Libraries / Tools
+
+- **Lucide React** – for icons  
+- **Vitest** – for unit testing  
+- **React Testing Library** – for component testing  
+- **ESLint** – for code linting and quality 
+
+---
+
+## ⚡ Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/EmrahIso/CottonBuy.git
+
+# Navigate into the project folder
+cd CottonBuy
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+ - Browse products fetched from Fake Store API
+ - Add desired products to the cart
+ - Adjust quantities or remove items
+ - Navigate between pages using React Router
+ - Proceed to checkout
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧪 Testing
+
+This project uses Vitest and React Testing Library.
+To run tests:
+
+```bash
+# Run all tests
+npm run test
 ```
