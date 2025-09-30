@@ -13,8 +13,6 @@ Fetches products dynamically using the **Fake Store API**, and features cart man
 - [⚡ Installation](#installation)
 - [🚀 Usage](#usage)
 - [🧪 Testing](#testing)
-- [🤝 Contributing](#contributing)
-- [📄 License](#license)
 
 ---
 
@@ -44,14 +42,14 @@ CottonBuy
 
 - **JavaScript / TypeScript**  
 - **React**  
-- **React Router**  
 - **HTML5 & CSS3**  
 - **Tailwind CSS**  
 - **Vite**  
 
 ### Additional Libraries / Tools
 
-- **Lucide React** – for icons  
+- **Lucide React** – for icons
+- **React Router** - for routing  
 - **Vitest** – for unit testing  
 - **React Testing Library** – for component testing  
 - **ESLint** – for code linting and quality 
