@@ -1,7 +1,7 @@
 import ShopNowLink from '../ui/ShopNowLink';
 import Carousel from '../ui/Carousel';
 
-const FeaturedProducts = () => {
+const FeaturedProducts: React.FC = () => {
   return (
     <section className='bg-white' data-testid='featured-products'>
       <div className='container xl:max-w-[1280px] mx-auto px-4 py-24'>

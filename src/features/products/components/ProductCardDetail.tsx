@@ -9,7 +9,7 @@ import QuantityPicker from '../../../components/ui/QuantityPicker';
 import type { Product } from '../../../types/Product';
 import type { CartProduct } from '../../../types/CartContextType';
 
-const ProductCardDetail = () => {
+const ProductCardDetail: React.FC = () => {
   const { products, loading, error } = useProductsContext();
   const params = useParams();
   const targetProduct: Product | undefined = products.find(

@@ -14,7 +14,7 @@ export type ShopOutletContext = {
   selectSortValue: sortType;
 };
 
-const ShopPage = () => {
+const ShopPage: React.FC = () => {
   const { products, loading, error } = useProductsContext();
   const [sortedProducts, setSortedProducts] = useState<Product[]>([]);
 

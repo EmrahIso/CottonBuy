@@ -10,7 +10,7 @@ import NavigationButton from '../ui/NavigationButton';
 
 import type { CartProduct } from '../../types/CartContextType';
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const { cartProducts } = useCartContext();
 
   const [navigationMode, setNavigationMode] = useState<'mobile' | 'desktop'>(

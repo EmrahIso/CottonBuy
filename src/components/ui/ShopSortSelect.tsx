@@ -1,12 +1,16 @@
 import { useOutletContext } from 'react-router';
+
 import { type ShopOutletContext } from '../../pages/ShopPage';
 
-const ShopSortSelect = () => {
+const ShopSortSelect: React.FC = () => {
   const { selectSortChangeHandler, selectSortValue } =
     useOutletContext<ShopOutletContext>();
 
   return (
-    <div className='sm:px-24 px-8 flex gap-8 mt-16 items-center justify-between'>
+    <div
+      className='sm:px-24 px-8 flex gap-8 mt-16 items-center justify-between'
+      data-testid='shop-select-filter'
+    >
       <label
         htmlFor='sort-products'
         className='inline-block sm:text-lg text-base font-medium text-neutral-600'

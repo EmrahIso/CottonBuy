@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Minus, Plus } from 'lucide-react';
 
 import SaveQuantityButton from './SaveQuantityButton';
@@ -22,13 +23,13 @@ const QuantityPicker = ({
     defaultProductQuantity
   );
 
-  const decrementProductQuantity = () => {
+  const decrementProductQuantity = (): void => {
     if (productQuantity > 0) {
       setProductQuantity((prevState: number) => prevState - 1);
     }
   };
 
-  const incrementProductQuantity = () => {
+  const incrementProductQuantity = (): void => {
     if (productQuantity < 20) {
       setProductQuantity((prevState: number) => prevState + 1);
     }

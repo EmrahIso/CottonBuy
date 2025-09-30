@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 
-const ShopNowLink = () => {
+const ShopNowLink: React.FC = () => {
   return (
     <Link
       to='shop'

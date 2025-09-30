@@ -6,7 +6,7 @@ import ShopSortSelect from '../../../components/ui/ShopSortSelect';
 import { type ShopOutletContext } from '../../../pages/ShopPage';
 import { type Product } from '../../../types/Product';
 
-const ProductCardShopGrid = () => {
+const ProductCardShopGrid: React.FC = () => {
   const { sortedProducts } = useOutletContext<ShopOutletContext>();
 
   return (

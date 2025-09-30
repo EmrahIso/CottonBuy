@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
+
 import { ShoppingCart } from 'lucide-react';
+
 import QuantityCartUpdateNotification from './QuantityCartUpdateNotification';
 
 type SaveQuantityButtonProps = {

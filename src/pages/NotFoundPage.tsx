@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
     <section className='lg:pt-50 pt-6 flex gap-16 flex-col items-center'>
       <h1 className='sr-only'>CottonBuy NotFound Page</h1>

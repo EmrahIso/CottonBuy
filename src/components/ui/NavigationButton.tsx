@@ -13,6 +13,7 @@ const NavigationButton = ({
   return (
     <button
       type='button'
+      data-testid='navigation-toggle-button'
       id='navigation-mobile-button'
       aria-label={
         isNavigationOpen ? 'Close main navigation' : 'Open main navigation'

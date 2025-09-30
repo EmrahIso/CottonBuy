@@ -9,7 +9,7 @@ import CartCheckoutBtn from '../features/cart/components/CartCheckoutBtn';
 import type { Product } from '../types/Product';
 import type { CartProduct } from '../types/CartContextType';
 
-const CartPage = () => {
+const CartPage: React.FC = () => {
   const { products, loading, error } = useProductsContext();
   const { cartProducts } = useCartContext();
 

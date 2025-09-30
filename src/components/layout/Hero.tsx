@@ -1,6 +1,6 @@
 import ShopNowLink from '../ui/ShopNowLink';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section
       id='hero'

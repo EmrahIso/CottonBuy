@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 import { useProductsContext } from '../../features/products/hooks/useProductsContext';
 
 import ProductCardCarousel from '../../features/products/components/ProductCardCarousel';
@@ -6,7 +7,7 @@ import CarouselSwitchButton from './CarouselSwitchButton';
 
 import { type Product } from '../../types/Product';
 
-const Carousel = () => {
+const Carousel: React.FC = () => {
   const { products, loading, error } = useProductsContext();
   const [startIndex, setStartIndex] = useState<number>(0);
 
@@ -26,7 +27,7 @@ const Carousel = () => {
   // Number of items shown depends on the browser window width (responsive layout).
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = (): void => {
       setShownItemsQuantity(setShownItemsQuantityCallback);
     };
 
@@ -43,13 +44,13 @@ const Carousel = () => {
     startIndex + shownItemsQuantity
   );
 
-  const slideCarouselLeft = () => {
+  const slideCarouselLeft = (): void => {
     if (startIndex > 0) {
       setStartIndex((prevState) => prevState - 1);
     }
   };
 
-  const slideCarouselRight = () => {
+  const slideCarouselRight = (): void => {
     if (startIndex < products.length - 3) {
       setStartIndex((prevState) => prevState + 1);
     }

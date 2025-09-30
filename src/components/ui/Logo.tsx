@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { Shirt } from 'lucide-react';
 
-const Logo = () => {
+const Logo: React.FC = () => {
   return (
     <Link
       to='/'

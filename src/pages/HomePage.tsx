@@ -2,7 +2,7 @@ import Hero from '../components/layout/Hero';
 import Newsletter from '../components/layout/Newsletter';
 import FeaturedProducts from '../components/layout/FeaturedProducts';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <main data-testid='homepage'>
       <Hero />

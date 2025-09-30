@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer
       className='bg-indigo-950 sm:h-[325px] h-[460px]'
