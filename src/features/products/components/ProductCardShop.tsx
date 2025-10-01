@@ -11,6 +11,7 @@ const ProductCardShop = ({ productData }: ProductCardShopProps) => {
     <div className='flex flex-col items-center gap-8'>
       <Link
         to={`/shop/${productData.id}`}
+        onClick={() => window.scrollTo(0, 0)}
         className='bg-white  inline-block border-1 border-transparent rounded-2xl hover:border-fuchsia-600'
       >
         <img
