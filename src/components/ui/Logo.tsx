@@ -6,6 +6,7 @@ const Logo: React.FC = () => {
     <Link
       to='/'
       className='flex items-center sm:gap-3 gap-2 hover:bg-neutral-200 transition-colors p-2 rounded-full'
+      onClick={() => window.scrollTo(0, 0)}
     >
       <div className='p-2 bg-gradient-to-bl from-fuchsia-500 to-purple-500 rounded-full rotate-30 text-neutral-100'>
         <Shirt size={24} strokeWidth={2.5} />

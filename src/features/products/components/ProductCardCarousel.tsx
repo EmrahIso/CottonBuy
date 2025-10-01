@@ -10,6 +10,7 @@ const ProductCardCarousel = ({ productData }: ProductCardCarouselProps) => {
   return (
     <Link
       to={`/shop/${productData.id}`}
+      onClick={() => window.scrollTo(0, 0)}
       className='flex flex-col items-center gap-10'
     >
       <img

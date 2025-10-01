@@ -55,6 +55,7 @@ const ProductCardDetail: React.FC = () => {
       <Link
         to={'/shop'}
         className='text-neutral-100 relative sm:text-xl text-base cursor-pointer font-medium rounded-full bg-gradient-to-bl from-fuchsia-500 to-purple-500 px-7 py-3.5 shadow-sm hover:from-neutral-100  hover:to-neutral-100 hover:text-indigo-950 transition-colors mt-20 sm:h-[51px] h-[46px]'
+        onClick={() => window.scrollTo(0, 0)}
       >
         Go to Shop Page!
       </Link>

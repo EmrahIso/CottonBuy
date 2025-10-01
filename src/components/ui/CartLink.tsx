@@ -18,6 +18,7 @@ const CartLink = ({ cartProductsCount, isMobileMode }: CartLinkProps) => {
           (isMobileMode ? 'bg-gray-50 shadow-md ' : '') +
           'flex items-center sm:gap-3 gap-2.5 cursor-pointer relative hover:bg-neutral-200 transition-colors p-2 rounded-full'
         }
+        onClick={() => window.scrollTo(0, 0)}
       >
         <span className='text-neutral-700 sm:text-lg text-base font-medium pl-1.5'>
           Cart
