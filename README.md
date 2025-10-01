@@ -25,14 +25,14 @@ CottonBuy
 
 ## ✨ Features
 
-- Dynamic product listing from **Fake Store API**  
-- Add to cart / remove from cart functionality  
-- Cart total calculation and checkout  
-- Responsive design for mobile and desktop  
-- Routing with **React Router**  
-- Icons using **Lucide React**  
-- State management using Context API  
-- Clean and type-safe TypeScript code  
+- Dynamic product listing from [Fake Store API](https://fakestoreapi.com/)
+- Add to cart / remove from cart functionality
+- Cart total calculation and checkout
+- Responsive design for mobile and desktop
+- Routing with **React Router**
+- Icons using **Lucide React**
+- State management using Context API
+- Clean and type-safe TypeScript code
 
 ---
 
@@ -40,19 +40,19 @@ CottonBuy
 
 ### Main Stack
 
-- **JavaScript / TypeScript**  
-- **React**  
-- **HTML5 & CSS3**  
-- **Tailwind CSS**  
-- **Vite**  
+- **JavaScript / TypeScript**
+- **React**
+- **HTML5 & CSS3**
+- **Tailwind CSS**
+- **Vite**
 
 ### Additional Libraries / Tools
 
 - **Lucide React** – for icons
-- **React Router** - for routing  
-- **Vitest** – for unit testing  
-- **React Testing Library** – for component testing  
-- **ESLint** – for code linting and quality 
+- **React Router** - for routing
+- **Vitest** – for unit testing
+- **React Testing Library** – for component testing
+- **ESLint** – for code linting and quality
 
 ---
 
@@ -74,11 +74,11 @@ npm run dev
 
 ## 🚀 Usage
 
- - Browse products fetched from Fake Store API
- - Add desired products to the cart
- - Adjust quantities or remove items
- - Navigate between pages using React Router
- - Proceed to checkout
+- Browse products fetched from Fake Store API
+- Add desired products to the cart
+- Adjust quantities or remove items
+- Navigate between pages using React Router
+- Proceed to checkout
 
 ## 🧪 Testing
 
